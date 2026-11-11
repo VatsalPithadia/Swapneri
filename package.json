@@ -1,0 +1,48 @@
+{
+  "name": "swapneri-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "FRONTEND",
+    "BACKEND"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"FRONTEND,BACKEND\" -c \"magenta,cyan\" \"npm run dev --prefix FRONTEND\" \"npm run dev --prefix BACKEND\"",
+    "dev:frontend": "npm run dev --prefix FRONTEND",
+    "dev:backend": "npm run dev --prefix BACKEND",
+    "build": "npm run build --prefix FRONTEND",
+    "test": "npm run test --prefix FRONTEND",
+    "lint": "npm run lint --prefix FRONTEND"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^6.0.2",
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.109.0",
+    "@tanstack/react-query": "^5.105.0",
+    "clsx": "^2.1.1",
+    "concurrently": "^10.0.6",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "lucide-react": "^1.65.0",
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-hook-form": "^7.91.0",
+    "tailwind-merge": "^3.7.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^4.1.12"
+  }
+}

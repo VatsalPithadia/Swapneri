@@ -1,0 +1,26 @@
+{
+  "name": "swapneri-backend",
+  "version": "1.0.0",
+  "description": "Swapneri Boutique REST API Backend Server",
+  "main": "src/server.ts",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node --watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.109.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.17.0",
+    "typescript": "^5.7.0"
+  }
+}
+
